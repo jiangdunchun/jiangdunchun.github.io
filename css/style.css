@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Nunito-Bold';
+    src:url(../fonts/Nunito-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src:url(../fonts/OpenSans-Regular.ttf) format('truetype');
+}
+
+.header-section {
+  background: #deecdf;
+  text-align: center;
+  min-height: 300px;
+}
+
+.header-section img {
+  width: 160px;
+  height: 160px;
+  border-radius:80px;
+}
+
+.header-section h1 {
+  font-family: 'Nunito-Bold';
+  font-size: 4em;
+  text-transform: capitalize;
+  color: #393b3a;
+}
+
+.header-section p {
+  font-family: 'Nunito-Bold';
+  font-size: 1.3em;
+  color: #393b3a;
+}
