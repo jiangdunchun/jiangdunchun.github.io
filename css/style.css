@@ -31,3 +31,13 @@
   font-size: 1.3em;
   color: #393b3a;
 }
+
+.resume-section {
+  min-width: 800px;
+}
+
+.footer-section{
+	padding:2em 0;
+	text-align:center;
+	background:#deecdf;
+}
