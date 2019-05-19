@@ -33,11 +33,31 @@
 }
 
 .resume-section {
-  min-width: 800px;
+  margin: 0 auto;
+  width: 800px;
+}
+
+.resume-section h1 {
+  font-family: 'Nunito-Bold';
+  font-size: 2em;
+  color: #393b3a;
+}
+
+.resume-section h2 {
+  font-family: 'Nunito-Bold';
+  display: inline;
+  font-size: 1.5em;
+  color: #393b3a;
+}
+
+.resume-section p {
+  font-family: 'Nunito-Bold';
+  font-size: 1em;
+  color: #393b3a;
 }
 
 .footer-section{
-	padding:2em 0;
+	padding:1em 0;
 	text-align:center;
 	background:#deecdf;
 }
