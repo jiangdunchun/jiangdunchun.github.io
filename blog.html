@@ -3,8 +3,11 @@
 <html>
 <head> 
 <title>Blogs.JiangDunchun</title>
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-<link href="css/sectionstyle.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/sectionstyle.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="./blogs/blogs.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/marked.min.js"></script>
 </head>
  
 <body>
@@ -15,33 +18,49 @@
             <h1>Jiang Dunchun Blogs</h1>
         </div>
     </div>
-    <div style="width:800px;margin:0 auto;">
+    <div id="blogs_div" style="width:800px;margin:0 auto;color:#393b3a;">
 
     </div>
     <div class="footer-section">
         <p>Copyright &copy; 2019 Jiang Dunchun.Supported by <a href="http://www.bootcss.com">bootstrap</a></p>
     </div>
     <script type="text/javascript">
-		// !function() {
-        //     var tbsource = "./blogs";
-        //     var hdfiles = "";
-        //     var objFSO =new ActiveXObject('Scripting.FileSystemObject');
+        var cata_div = document.getElementById("blogs_div");
+        var catalog = BlogsCatalog;
+
+        creat_blog = function(path){
+            while(cata_div.children.length > 0){
+                cata_div.removeChild(cata_div.children[0]);
+            }
             
-        //     if(!objFSO.FolderExists(tbsource)) {
-        //         objFSO = null;
-        //     }
+            $.post("blogs/"+path,null,function(data){
+                var htm = marked(data);
+                cata_div.innerHTML = htm;
+            });
+        }
+
+        creat_catalog = function(name, time, path){
             
-        //     var objFolder = objFSO.GetFolder(tbsource);
-        //     var colFiles = new Enumerator(objFolder.Files);
-        //     var re_inf1 =/\.(md)$/i;
-            
-        //     for (; !colFiles.atEnd(); colFiles.moveNext()){
-        //         console.log(colFiles.item().Name);
-        //         // var objFile = colFiles.item();
-        //         // if(re_inf1.test(objFile.Name.toLowerCase())){
-        //         // hdfiles = hdfiles+"<img src='1/"+objFile.Name+"'>";
-        //     }
-		// }();
+            var name_p = document.createElement("p");
+            name_p.style.cssText = "font-size:1.5em;float:left;font-weight:bold;";
+            name_p.innerText = name;
+            name_p.onclick = Function("creat_blog('"+path+"');");
+
+            var time_p = document.createElement("p");
+            time_p.style.cssText = "font-size:1em;float:right;font-style:italic;";
+            time_p.innerText = time;
+
+            var b_div = document.createElement("div");
+            b_div.style.cssText = "clear:both";
+
+            cata_div.appendChild(name_p);
+            cata_div.appendChild(time_p);
+            cata_div.appendChild(b_div);
+        }
+        
+        for(var i in catalog){
+            creat_catalog(catalog[i].name, catalog[i].time, catalog[i].path);
+        }
 	</script>
 
 </body>
