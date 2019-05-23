@@ -7,6 +7,6 @@ BlogsCatalog = [
     {
         "name":"What can we do by using WAMPFramework",
         "time":"9/5/2019",
-        "path":"wamp.md"
+        "path":"wamp.js"
     }
 ]

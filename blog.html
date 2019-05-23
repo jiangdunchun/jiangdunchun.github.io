@@ -2,12 +2,13 @@
 <!DOCTYPE html>
 <html>
 <head> 
-<title>Blogs.JiangDunchun</title>
+    <title>Blogs.JiangDunchun</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
     <link href="css/sectionstyle.css" rel="stylesheet" type="text/css" media="all" />
     <script src="blogs/blogs.js"></script>
     <script src="jquery-3.3.1.min.js"></script>
     <script src="marked.min.js"></script>
+    <script id="blogs_js" src=""></script>
 </head>
  
 <body>
@@ -25,6 +26,7 @@
         <p>Copyright &copy; 2019 Jiang Dunchun.Supported by <a href="http://www.bootcss.com">bootstrap</a></p>
     </div>
     <script type="text/javascript">
+        var head = document.getElementsByTagName('head')[0]; 
         var cata_div = document.getElementById("blogs_div");
         var catalog = BlogsCatalog;
 
@@ -33,10 +35,16 @@
                 cata_div.removeChild(cata_div.children[0]);
             }
             
-            $.post("blogs/"+path,null,function(data){
-                var htm = marked(data);
+            head.removeChild(head.children[head.children.length-1]);
+
+            var script= document.createElement("script"); 
+            script.type = "text/javascript"; 
+            script.src="blogs/" + path; 
+            script.onload = function(){
+                var htm = marked(blog_content);
                 cata_div.innerHTML = htm;
-            });
+            }
+            head.appendChild(script); 
         }
 
         creat_catalog = function(name, time, path){
