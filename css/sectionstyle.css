@@ -14,9 +14,9 @@
 }
 
 .header-section img {
-  width: 60px;
-  height: 60px;
-  border-radius:30px;
+  width: 80px;
+  height: 80px;
+  border-radius:40px;
   float: left;
 }
 
@@ -24,7 +24,6 @@
   font-family: 'LillyBelle';
   font-size: 2em;
   float: center;
-  text-transform: capitalize;
   color: #393b3a;
 }
 

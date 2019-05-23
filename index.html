@@ -2,64 +2,71 @@
 <!DOCTYPE html>
 <html>
 <head> 
-<title>JiangDunchun</title>
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-<link href="css/indexstyle.css" rel="stylesheet" type="text/css" media="all" />
+    <title>JiangDunchun</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/indexstyle.css" rel="stylesheet" type="text/css" media="all" />
 </head>
  
 <body>
     <div class="header-section">
-        <img src="src/img/avatar.jpg">
-        <h1>Jiang Dunchun</h1>
-        <p>Interest in Computer Graphics & Internet of Things</p>
+        <div style="height:10px"></div>
+        <div style="width:900px;margin:0 auto;">
+            <div style="float:left;width:100px">
+                <img src="src/img/avatar.jpg">
+            </div>
+            <div style="float:left;width:800px">
+                <h1>Hi, I am Jiang Dunchun</h1>
+            </div>
+        </div>
     </div>
+    <div style="height:15px"></div>
+
     <div style="width:800px;margin:0 auto;">
         <div style="float:left;width:200px">
+            <div style="height:15px"></div>
             <ul>
-                <li><a href="mailto:jiangdunchun@outlook.com">Email</a></li>
+                <li><a href="javascript:click_about_me()">About Me</a></li>
+                <li><a href="javascript:click_blogs()">Blogs</a></li>
                 <li><a href="https://www.linkedin.com/in/jiang-dunchun-9006b2123/">Linkin</a></li>
                 <li><a href="https://github.com/jiangdunchun">GitHub</a></li>
-                <li><a href="./blog.html">Blogs</a></li>
             </ul>
         </div>
-        <div style="float:left;width:600px">
-            <div class="resume-section">
-                <h1>Research Engineer</h1>
-                <h2>
-                    <p style="float:left;"><a href="http://www.vrmaker.com.cn">Wuhan VRMaker Technology Co., Ltd.</a></p>
-                    <time style="float:right">7/2018-Present</time>
-                    <div style="clear:both"></div> 
-                </h2>
-                <p>Research on How VR(AR) meet with IoT.</p>
-            </div>
-            <div class="resume-section">
-                <h1>Master of Mechanical Engineering</h1>
-                <h2>
-                    <p style="float:left;">Wuhan University of Technology</p>
-                    <time style="float:right">9/2015-6/2018</time>
-                    <div style="clear:both"></div> 
-                </h2>
-                <p>The Graduate Research is "Design and Research of Virtual Reality System for Dry Cement Production".</p>
-                <p>Majority research field is Computer Graphics. And also had participated in several programs about SCM, PLC, and some CAD/CAM software programs' add-to functions' development.</p>
-            </div>
-            <div class="resume-section">
-                <h1>Bachelor of Mineral Processing Engineering</h1>
-                <h2>
-                    <p style="float:left;">Wuhan University of Technology</p>
-                    <time style="float:right">9/2011-6/2015</time>
-                    <div style="clear:both"></div> 
-                </h2>
-                <p>"Triple-A Student" at School of Resources and Environmental Engineering.</p>
-                <p>Took the Outreach Minister of Student Dormitory Management Committee in Wuhan University of Technology.</p>
-            </div>
+        <div id="content_div" style="float:left;width:600px">
         </div>
         <div style="clear:both"></div> 
     </div>
     
+    <div style="height:15px"></div>
+    
     <div class="footer-section">
         <p>Copyright &copy; 2019 Jiang Dunchun.Supported by <a href="http://www.bootcss.com">bootstrap</a></p>
     </div>
-</div>
+
+    <script type="text/javascript">
+        var about_me_div_id = "about_me_div";
+        var blogs_div_id = "blogs_div";
+        var content_div = document.getElementById("content_div");
+
+        clear_content = function()
+        {
+            while(content_div.children.length > 0){
+                content_div.removeChild(cata_div.children[0]);
+            }
+        }
+
+        click_about_me = function(){
+            if (document.getElementById(about_me_div_id) != null ) return;
+
+            clear_content();
+            console.log("click_about_me");
+        }
+    
+        click_blogs = function(){
+            if (document.getElementById(blogs_div_id) != null ) return;
+
+            clear_content();
+            console.log("click_blogs");
+        }
+    </script>
 </body>
- 
 </html>
