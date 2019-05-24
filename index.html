@@ -5,6 +5,8 @@
     <title>JiangDunchun</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
     <link href="css/indexstyle.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="json/resume.js"></script>
+    <script src="json/blogs.js"></script>
 </head>
  
 <body>
@@ -12,7 +14,7 @@
         <div style="height:10px"></div>
         <div style="width:900px;margin:0 auto;">
             <div style="float:left;width:100px">
-                <img src="src/img/avatar.jpg">
+                <img src="img/avatar.jpg">
             </div>
             <div style="float:left;width:800px">
                 <h1>Hi, I am Jiang Dunchun</h1>
@@ -21,9 +23,9 @@
     </div>
     <div style="height:15px"></div>
 
-    <div style="width:800px;margin:0 auto;">
+    <div id="main_div" style="width:800px;margin:0 auto;">
         <div style="float:left;width:200px">
-            <div style="height:15px"></div>
+            <div style="height:20px"></div>
             <ul>
                 <li><a href="javascript:click_about_me()">About Me</a></li>
                 <li><a href="javascript:click_blogs()">Blogs</a></li>
@@ -31,8 +33,7 @@
                 <li><a href="https://github.com/jiangdunchun">GitHub</a></li>
             </ul>
         </div>
-        <div id="content_div" style="float:left;width:600px">
-        </div>
+        <div id="content_div" style="float:left;width:600px"></div>
         <div style="clear:both"></div> 
     </div>
     
@@ -50,23 +51,54 @@
         clear_content = function()
         {
             while(content_div.children.length > 0){
-                content_div.removeChild(cata_div.children[0]);
+                content_div.removeChild(content_div.children[0]);
             }
         }
 
         click_about_me = function(){
             if (document.getElementById(about_me_div_id) != null ) return;
-
             clear_content();
-            console.log("click_about_me");
+
+            var about_me_div = document.createElement("div");
+            about_me_div.id = about_me_div_id;
+            for(var i in ResumeCatalog){
+                var item_div = document.createElement("item");
+
+                var title_p = document.createElement("h1");
+                title_p.innerText = ResumeCatalog[i].title;
+                item_div.appendChild(title_p);
+
+                var org_p = document.createElement("h2");
+                org_p.innerText = ResumeCatalog[i].org;
+                item_div.appendChild(org_p);
+
+                var time_p = document.createElement("time");
+                time_p.innerText = ResumeCatalog[i].time;
+                item_div.appendChild(time_p);
+
+                for (var j in ResumeCatalog[i].desc){
+                    var desc_p = document.createElement("p");
+                    desc_p.innerText = ResumeCatalog[i].desc[j];
+                    item_div.appendChild(desc_p);
+                }
+
+                about_me_div.appendChild(item_div);
+
+                var split_div = document.createElement("div");
+                split_div.style = "height:15px";
+                about_me_div.appendChild(split_div);
+            }
+            content_div.appendChild(about_me_div);
         }
     
         click_blogs = function(){
             if (document.getElementById(blogs_div_id) != null ) return;
-
             clear_content();
+
             console.log("click_blogs");
         }
+
+        click_about_me();
     </script>
 </body>
 </html>

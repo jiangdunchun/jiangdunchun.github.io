@@ -47,12 +47,30 @@ li a:hover {
   border-radius: 5px;
 }
 
-li a:active
-{
+li a:active{
   background-color:#393b3a;
   color: white;
   text-decoration: none;
   border-radius: 5px;
+}
+
+item h1{
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+item h2{
+  font-weight: bold;
+  display:inline-table;
+  width: 400px;
+  font-size: 1.2em;
+}
+
+item time{
+  font-style: italic;
+  display:inline-table;
+  width: 200px;
+  font-size: 1em;
 }
 
 .footer-section{
