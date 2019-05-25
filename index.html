@@ -145,15 +145,10 @@
             blog_div.appendChild(split_div);
 
             var p_div = document.createElement("div");
-            $.ajax({
-                url: "./blogs/"+ path,
-                async:false,
-                type:'post',
-                dataType:'html',
-                success:function(data) {
-                    p_div.innerHTML = data;
-                }
-            }); 
+            $.post("blogs/"+path,null,function(data){
+                //var htm = marked(data);
+                p_div.innerHTML = data;
+            });
             blog_div.appendChild(p_div);
 
             blog_con_div.append(blog_div);
