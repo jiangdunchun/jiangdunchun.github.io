@@ -6,6 +6,7 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
     <link href="css/indexstyle.css" rel="stylesheet" type="text/css" media="all" />
     <script src="jquery-3.3.1.min.js"></script>
+    <script src="marked.min.js"></script>
     <script src="json/resume.js"></script>
     <script src="json/blogs.js"></script>
 </head>
@@ -132,24 +133,25 @@
 
             var blog_div = document.createElement("blog");
 
-            var h1_p = document.createElement("h1");
-            h1_p.innerText = name;
-            blog_div.appendChild(h1_p);
+            // var h1_p = document.createElement("h1");
+            // h1_p.innerText = name;
+            // blog_div.appendChild(h1_p);
 
-            var time_p = document.createElement("time");
-            time_p.innerText = time;
-            blog_div.appendChild(time_p);
+            // var time_p = document.createElement("time");
+            // time_p.innerText = time;
+            // blog_div.appendChild(time_p);
 
-            var split_div = document.createElement("div");
-            split_div.style = "height:5px";
-            blog_div.appendChild(split_div);
+            // var split_div = document.createElement("div");
+            // split_div.style = "height:5px";
+            // blog_div.appendChild(split_div);
 
-            var p_div = document.createElement("div");
+            //var p_div = document.createElement("div");
             $.get("blogs/"+path,null,function(data){
-                //var htm = marked(data);
-                p_div.innerHTML = data;
+                var htm = marked(data);
+                blog_div.innerHTML = htm;
+                //p_div.innerHTML = htm;
             });
-            blog_div.appendChild(p_div);
+            //blog_div.appendChild(p_div);
 
             blog_con_div.append(blog_div);
             content_div.appendChild(blog_con_div);
