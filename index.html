@@ -6,7 +6,7 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
     <link href="css/indexstyle.css" rel="stylesheet" type="text/css" media="all" />
     <script src="jquery-3.3.1.min.js"></script>
-    <script src="marked.min.js"></script>
+    <script src="Markdown.Converter.min.js"></script>
     <script src="json/resume.js"></script>
     <script src="json/blogs.js"></script>
 </head>
@@ -147,9 +147,9 @@
 
             //var p_div = document.createElement("div");
             $.get("blogs/"+path,null,function(data){
-                var htm = marked(data);
+                var converter = new Markdown.Converter();
+                var htm = converter.makeHtml(data);
                 blog_div.innerHTML = htm;
-                //p_div.innerHTML = htm;
             });
             //blog_div.appendChild(p_div);
 
