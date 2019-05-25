@@ -5,6 +5,7 @@
     <title>JiangDunchun</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
     <link href="css/indexstyle.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="jquery-3.3.1.min.js"></script>
     <script src="json/resume.js"></script>
     <script src="json/blogs.js"></script>
 </head>
@@ -23,7 +24,7 @@
     </div>
 
     <div style="min-height:100vh;margin-top:0px;margin-bottom:-50px;">
-        <div id="main_div" style="width:800px;margin:0 auto;">
+        <div id="main_div" style="width:1000px;margin:0 auto;">
             <div style="height:100px"></div>
             <div style="float:left;width:200px">
                 <div style="height:20px"></div>
@@ -34,7 +35,7 @@
                     <li><a href="https://github.com/jiangdunchun">GitHub</a></li>
                 </ul>
             </div>
-            <div id="content_div" style="float:left;width:600px"></div>
+            <div id="content_div" style="float:left;width:800px"></div>
             <div style="clear:both"></div> 
         </div>
     </div>
@@ -46,6 +47,7 @@
     <script type="text/javascript">
         var about_me_div_id = "about_me_div";
         var blogs_div_id = "blogs_div";
+        var blog_con_div_id = "blog_con_div"
         var content_div = document.getElementById("content_div");
 
         clear_content = function()
@@ -85,7 +87,7 @@
                 about_me_div.appendChild(item_div);
 
                 var split_div = document.createElement("div");
-                split_div.style = "height:15px";
+                split_div.style = "height:5px";
                 about_me_div.appendChild(split_div);
             }
             content_div.appendChild(about_me_div);
@@ -95,7 +97,67 @@
             if (document.getElementById(blogs_div_id) != null ) return;
             clear_content();
 
-            console.log("click_blogs");
+            var blogs_div = document.createElement("div");
+            blogs_div.id = blogs_div_id;
+            for(var i in BlogsCatalog){
+                var item_div = document.createElement("item");
+
+                var name_p = document.createElement("h2");
+                var href_d = document.createElement("a");
+                href_d.href = "javascript:creat_blog(\""+BlogsCatalog[i].name+"\",\""+BlogsCatalog[i].time+"\",\""+BlogsCatalog[i].path +"\")";
+                href_d.innerText = BlogsCatalog[i].name;
+                name_p.appendChild(href_d);
+                item_div.appendChild(name_p);
+
+                var time_p = document.createElement("time");
+                time_p.innerText = BlogsCatalog[i].time;
+                item_div.appendChild(time_p);
+
+
+                blogs_div.appendChild(item_div);
+
+                var split_div = document.createElement("div");
+                split_div.style = "height:5px";
+                blogs_div.appendChild(split_div);
+            }
+            content_div.appendChild(blogs_div);
+        }
+
+        creat_blog = function(name, time, path){
+            if (document.getElementById(blog_con_div_id) != null ) return;
+            clear_content();
+
+            var blog_con_div = document.createElement("div");
+            blog_con_div.id = blog_con_div_id;
+
+            var blog_div = document.createElement("blog");
+
+            var h1_p = document.createElement("h1");
+            h1_p.innerText = name;
+            blog_div.appendChild(h1_p);
+
+            var time_p = document.createElement("time");
+            time_p.innerText = time;
+            blog_div.appendChild(time_p);
+
+            var split_div = document.createElement("div");
+            split_div.style = "height:5px";
+            blog_div.appendChild(split_div);
+
+            var p_div = document.createElement("div");
+            $.ajax({
+                url: "./blogs/"+ path,
+                async:false,
+                type:'post',
+                dataType:'html',
+                success:function(data) {
+                    p_div.innerHTML = data;
+                }
+            }); 
+            blog_div.appendChild(p_div);
+
+            blog_con_div.append(blog_div);
+            content_div.appendChild(blog_con_div);
         }
 
         click_about_me();

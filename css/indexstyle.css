@@ -66,7 +66,7 @@ item h1{
 item h2{
   font-weight: bold;
   display:inline-table;
-  width: 400px;
+  width: 600px;
   font-size: 1.2em;
 }
 
@@ -75,6 +75,16 @@ item time{
   display:inline-table;
   width: 200px;
   font-size: 1em;
+}
+
+blog h1{
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+blog time{
+  font-style: italic;
+  font-size: 1.2em;
 }
 
 .footer-section{
