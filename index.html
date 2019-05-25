@@ -145,7 +145,7 @@
             blog_div.appendChild(split_div);
 
             var p_div = document.createElement("div");
-            $.post("blogs/"+path,null,function(data){
+            $.get("blogs/"+path,null,function(data){
                 //var htm = marked(data);
                 p_div.innerHTML = data;
             });
