@@ -37,7 +37,7 @@
                 </ul>
             </div>
             <div id="content_div" style="float:left;width:800px"></div>
-            <div style="clear:both"></div> 
+            <div style="height:50px"></div>
         </div>
     </div>
     <div style="clear:both"></div> 
@@ -105,7 +105,7 @@
 
                 var name_p = document.createElement("h2");
                 var href_d = document.createElement("a");
-                href_d.href = "javascript:creat_blog(\""+BlogsCatalog[i].name+"\",\""+BlogsCatalog[i].time+"\",\""+BlogsCatalog[i].path +"\")";
+                href_d.href = "./blog.html?id=" + BlogsCatalog[i].path;
                 href_d.innerText = BlogsCatalog[i].name;
                 name_p.appendChild(href_d);
                 item_div.appendChild(name_p);
@@ -122,39 +122,6 @@
                 blogs_div.appendChild(split_div);
             }
             content_div.appendChild(blogs_div);
-        }
-
-        creat_blog = function(name, time, path){
-            if (document.getElementById(blog_con_div_id) != null ) return;
-            clear_content();
-
-            var blog_con_div = document.createElement("div");
-            blog_con_div.id = blog_con_div_id;
-
-            var blog_div = document.createElement("blog");
-
-            // var h1_p = document.createElement("h1");
-            // h1_p.innerText = name;
-            // blog_div.appendChild(h1_p);
-
-            // var time_p = document.createElement("time");
-            // time_p.innerText = time;
-            // blog_div.appendChild(time_p);
-
-            // var split_div = document.createElement("div");
-            // split_div.style = "height:5px";
-            // blog_div.appendChild(split_div);
-
-            //var p_div = document.createElement("div");
-            $.get("blogs/"+path,null,function(data){
-                var converter = new Markdown.Converter();
-                var htm = converter.makeHtml(data);
-                blog_div.innerHTML = htm;
-            });
-            //blog_div.appendChild(p_div);
-
-            blog_con_div.append(blog_div);
-            content_div.appendChild(blog_con_div);
         }
 
         click_about_me();

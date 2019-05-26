@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>JiangDunchun</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/indexstyle.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="Markdown.Converter.min.js"></script>
+</head>
+ 
+<body>
+    <div class="header-section">
+        <div style="height:10px"></div>
+        <div style="width:900px;margin:0 auto;">
+            <div style="float:left;width:100px">
+                <a href="./index.html"><img src="resume/avatar.jpg"></a>
+            </div>
+            <div style="float:left;width:800px">
+                <h1>Hi, I am Jiang Dunchun, interest in Computer Graphics & IoT</h1>
+            </div>
+        </div>
+    </div>
+
+    <div style="min-height:100vh;margin-top:0px;margin-bottom:-50px;">
+        <div style="height:100px"></div>
+        <div id="main_div" style="width:1000px;margin:0 auto;">
+        </div>
+        <div style="height:50px"></div>
+    </div>
+    <div style="clear:both"></div> 
+    <div class="footer-section">
+        <p>Copyright &copy; 2019 Jiang Dunchun.Supported by <a href="http://www.bootcss.com">bootstrap</a></p>
+    </div>
+
+    <script type="text/javascript">
+        var url = decodeURI(window.location.href);
+        var argsIndex = url .split("?id=");
+        var path = argsIndex[1];
+
+        var main_div = document.getElementById("main_div");
+
+        var blog_con_div = document.createElement("div");
+
+        $.get("blogs/"+path,null,function(data){
+            var converter = new Markdown.Converter();
+            var htm = converter.makeHtml(data);
+            blog_con_div.innerHTML = htm;
+        });
+        main_div.appendChild(blog_con_div);
+    </script>
+</body>
+</html>
