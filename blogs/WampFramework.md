@@ -19,4 +19,4 @@ Instead of a submodule of this Remote Rendering Framework, I prefer a independen
 
 ![WAMPFramework](blogs/wamppic/WAMPFramework.png)
 
-This graph explain how this framework works clearly. Different modules are maintained individually, and the Exporter regists them in Router. After that, Router could invoke the API in these modules by reflection. Meanwhile, the Exporter exports these API to js files which could be used in HTML based on Client.
+This graph explains how this framework works clearly. Different modules are maintained individually, and registed in Router by Exporter. After that, Router could invoke the API in these modules by reflection. Meanwhile, the Exporter exports these API to js files which could be used in HTML based on Client.
