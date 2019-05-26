@@ -20,7 +20,7 @@ ResumeCatalog = [
         "time":"Sep/2011-Jun/2015",
         "org":"Wuhan University of Technology",
         "desc":[
-            "Major in Mineral Processing Engineer.",
+            "Major in Mineral Processing Engineering.",
         ]
     }
 ]
