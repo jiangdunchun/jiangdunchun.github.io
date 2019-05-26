@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'LillyBelle';
+    src:url(../fonts/LillyBelle.ttf) format('truetype');
+}
+
+.header-section {
+  background: #deecdf;
+  text-align: left;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.header-section img {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  float: left;
+}
+
+.header-section h1 {
+  font-family: 'LillyBelle';
+  font-size: 1.5em;
+  float: center;
+  color: #393b3a;
+}
+
+.blog h1{
+  font-weight: bold;
+  font-size: 1.7em;
+}
+
+.blog h2{
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.blog h3{
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.blog p{
+  font-size: 1.2em;
+}
+
+.blog img{
+  max-width: 60%;
+}
+
+.blog blockquote{
+  background: #a1c2dd;
+  font-size: 1.0em;
+}
+
+.footer-section{
+  padding:1em 0;
+  width: 100%;
+  height: 50px;
+	text-align:center;
+	background:#deecdf;
+}
