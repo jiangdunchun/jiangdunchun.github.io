@@ -16,3 +16,5 @@ The great idea of WAMP really inspired me, but I still need to do some changes. 
 >* Export all c# API to js files, as a result, the front_end could invoke these API just by referencing these files
 
 Instead of a submodule of this Remote Rendering Framework, I prefer a independent one for the principles in Design Patterns. And just used [websocket-sharp](https://github.com/sta/websocket-sharp) as the only reference of this module for the websocket communication. Another difficulty is how to invoke the target interfaces in Business Logic Layer while we don't depend on any libaries in it. The Reflection characteristic of .NET help me to deal with this problem, even though it spends more time consumption than invoking interfaces directly.
+
+![WAMP](blogs/wamppic/Wamp.png)
