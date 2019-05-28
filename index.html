@@ -99,9 +99,9 @@
             var blogs_div = document.createElement("div");
             blogs_div.id = blogs_div_id;
             for(var i in BlogsCatalog){
-                var item_div = document.createElement("item");
+                var item_div = document.createElement("blog");
 
-                var name_p = document.createElement("h2");
+                var name_p = document.createElement("h1");
                 var href_d = document.createElement("a");
                 href_d.href = "./blog.html?id=" + BlogsCatalog[i].path;
                 href_d.innerText = BlogsCatalog[i].name;
