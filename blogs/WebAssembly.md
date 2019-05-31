@@ -7,5 +7,5 @@ H.264 is a matural video stream standard and has been widely used. We planned to
 
 WebAssembly provides languages such as C/C++ and Rust with a compilation target so that they can run with near-native performance on the web for . It is also designed to run alongside JavaScript, allowing both to work together.<sup>[1]</sup> This [article](https://www.smashingmagazine.com/2017/05/abridged-cartoon-introduction-webassembly/) explains it in details of why  this technology is fast.
 
-## Reference
+## References
 [1] [https://developer.mozilla.org/en-US/docs/WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly)

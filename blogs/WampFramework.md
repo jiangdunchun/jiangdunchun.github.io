@@ -21,5 +21,5 @@ Instead of a submodule of this Remote Rendering Framework, I prefer a independen
 
 This graph explains how this framework works clearly. Different modules are maintained individually, and registed in Router by Exporter. After that, Router could invoke the API in these modules by reflection. Meanwhile, the Exporter exports these API to js files which could be used in HTML based on Client.
 
-## Reference
+## References
 [1] [https://wamp-proto.org](https://wamp-proto.org)
