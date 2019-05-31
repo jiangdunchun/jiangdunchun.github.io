@@ -5,7 +5,7 @@ Last November, I got a task about refactoring a Remote Rendering Framework. It w
 
 <center><img style="max-width: 60%;" src="blogs/wamppic/Remote_Rendering_Framework.png"></center>
 
-The simplification of this matter is how to design a flexible module of RPC(Remote Procedure Call) and Pub&Sub(Publisher and Subscriber) models. I found [WAMP](https://wamp-proto.org), an intriguing solution to this problem. The graph below shows the WAMP in an IoT application.
+The simplification of this matter is how to design a flexible module of RPC(Remote Procedure Call) and Pub&Sub(Publisher and Subscriber) models. I found [WAMP](https://wamp-proto.org), an intriguing solution to this problem. The graph<sup>[1]</sup> below shows the WAMP in an IoT application.
 
 <center><img style="max-width: 60%;" src="blogs/wamppic/WAMP_in_an_IoT_application.svg"></center>
 
@@ -20,3 +20,6 @@ Instead of a submodule of this Remote Rendering Framework, I prefer a independen
 <center><img style="width: 60%;" src="blogs/wamppic/WAMPFramework.png"></center>
 
 This graph explains how this framework works clearly. Different modules are maintained individually, and registed in Router by Exporter. After that, Router could invoke the API in these modules by reflection. Meanwhile, the Exporter exports these API to js files which could be used in HTML based on Client.
+
+## Reference
+[1] [https://wamp-proto.org](https://wamp-proto.org)
