@@ -9,7 +9,7 @@ WebAssembly provides languages such as C/C++ and Rust with a compilation target 
 
 <center><video src="blogs/Using_WebAssembly_in_Decoding_H.264_for_Real-time_Remote_Rendering/demo.mp4" width="80%" controls="controls"></video></center>
 
-Even though this approach could apparently decrease the traffic and ensure the fluency as much as possible, it actually consumes much more hardware resources than before. The CPU occupancy of front-end device always stays in a high level when decoding the video stream. I try to resolve this problem using hardware decoding technology, and find it is an expensive project: dfferent OSs(Windows, Linux, macOS, Android) and chip makers(Intel，AMD，Nvidia) have their own solutions. I will share them if I get some achievements.
+Even though this approach could apparently decrease the traffic and ensure the fluency as much as possible, it actually consumes much more hardware resources than before. The CPU occupancy of front-end device always stays in a high level when decoding the video stream. I try to resolve this problem using hardware decoding technology, and find it is an expensive project: different OSs(Windows, Linux, macOS, Android) and chip makers(Intel，AMD，Nvidia) have their own solutions. I will share them if I get some achievements.
 
 ## References
 [1] [https://developer.mozilla.org/en-US/docs/WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly)
