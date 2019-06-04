@@ -1,6 +1,6 @@
 BlogsCatalog = [
     {
-        "name":"A Simple MR Application about Digital Twins",
+        "name":"A Simple MR Application about Digital Twins and It's Great Expectation",
         "time":"10/6/2019",
         "path":"A_Simple_MR_Application_about_Digital_Twins_and_It's_Great_Expectation.md"
     },
