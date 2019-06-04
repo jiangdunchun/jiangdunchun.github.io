@@ -2,7 +2,7 @@ BlogsCatalog = [
     {
         "name":"A Simple MR Application about Digital Twins",
         "time":"10/6/2019",
-        "path":"A_Simple_MR_Application_about_Digital_Twins.md"
+        "path":"A_Simple_MR_Application_about_Digital_Twins_and_It's_Great_Expectation.md"
     },
     {
         "name":"Using WebAssembly in Decoding H.264 for Real-time Remote Rendering",
