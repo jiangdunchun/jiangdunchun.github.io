@@ -1,5 +1,5 @@
 # A Simple MR Application about Digital Twins and It's Great Expectation
-*10/6/2019*
+*7/6/2019*
 
 Based on Hololens and Unity3D, we developed a simple MR application could monitor and control a PLC system: showing the real-time data (tempreture, humidity, CO2 concentrations) from the sensors and controlling the devices (lamps, fans, pumps) in virtual world. In academia, this technology is called Digital Twins. Here is our demo:
 
