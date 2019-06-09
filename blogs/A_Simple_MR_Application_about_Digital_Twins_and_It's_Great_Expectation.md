@@ -13,5 +13,5 @@ Even though this may seem redundant, I have my own thought. After several simila
 
 <center><img style="max-width: 60%;" src="blogs/A_Simple_MR_Application_about_Digital_Twins_and_It's_Great_Expectation/data_pool.png"></center>
 
-But it is still far from my destination. This framework still haven't applied to a big program contains tens of thousands of data sources, whose characteristics of high-density throughput and computation might need to be resolved by using distributed system. And it also hasn't made maximum use of the history data. I plan to add an artificial intelligence module to this system for real-time diagnosis and prediction based on these history data.
+But it is still far from my destination. This framework still hasn't applied to a big program contains tens of thousands of data sources, whose characteristics of high-density throughput and computation might need to be resolved by using distributed system. And it also hasn't made maximum use of the history data. I plan to add an artificial intelligence module to this system for real-time diagnosis and prediction based on these history data.
 
