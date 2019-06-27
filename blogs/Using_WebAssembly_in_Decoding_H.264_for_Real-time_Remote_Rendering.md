@@ -14,7 +14,7 @@ Even though this approach could apparently decrease the traffic and ensure the f
 ----------------------------
 *updated 27/6/2019*
 
-After several tests, I find this approach has bad performances in tablets. Hardware acceleration has been the last method to deal with this problem if we want to continue this technical route (The bad news is the we still don't know whether the hardware acceleration could work in WebAssembly or not).
+After several tests, I find this approach has bad performances in tablets. Hardware acceleration has been the last method to deal with this problem if we want to continue this technical route (The bad news is we still don't know whether the hardware acceleration could work in WebAssembly or not).
 
 After several months spent on this program, I think it is time to reaccess the feasibility of this technical route, or choose to give up and use the [WebRTC](https://webrtc.org/) instead.
 
