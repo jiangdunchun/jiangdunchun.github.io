@@ -1,5 +1,5 @@
 # WampFramework: Remotely Invoke the API in Local C# Assembly from js
-*26/5/2019*
+*published on 26/5/2019*
 
 Last November, I got a task about refactoring a Remote Rendering Framework. It was a short-term project and constructed by large amount of temporary code. The graph below presents this framework. And the most chaotic part is the Communication Processing Layer, which receives the message(for example the responding to events of mouse and keyboard) from HTML, processes them and sends the return message back(for example the result image of rendering). In this module, We used to invoke the target interfaces of Business Logic Layer by analysing the message manually, which means we need to add an option in the switch function of message analysis every time when a new interface was opened up, and some other essential code of getting arguments, constructing return packet and so on.
 
