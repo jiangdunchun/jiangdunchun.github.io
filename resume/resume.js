@@ -1,7 +1,15 @@
 ResumeCatalog = [
     {
+        "title":"Head of Product Department",
+        "time":"Jan/2020-Now",
+        "org":"Wuhan VRMaker Technology Co., Ltd.",
+        "desc":[
+            "Responsible for product development and advance technology research.",
+        ]
+    },
+    {
         "title":"Research Engineer ",
-        "time":"Jun/2019-Now",
+        "time":"Jun/2019-Dec/2019",
         "org":"Wuhan VRMaker Technology Co., Ltd.",
         "desc":[
             "Research on how VR & AR meet with IoT.",
