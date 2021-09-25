@@ -1,5 +1,10 @@
 BlogsCatalog = [
     {
+        "name":"基于FFT的海面渲染",
+        "time":"25/9/2021",
+        "path":"fft_water_simulation.md"
+    },
+    {
         "name":"WebRTC in IPC Live & Remote Rendering",
         "time":"10/10/2020",
         "path":"WebRTC_in_IPC_Live_&_Remote_Rendering.md"
