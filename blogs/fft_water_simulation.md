@@ -1,6 +1,4 @@
-*本文为GAMES101大作业。*
-
-*代码在[此处](https://github.com/jiangdunchun/games101_hw/tree/main/hw_final)*
+*本文为GAMES101大作业。代码在[此处](https://github.com/jiangdunchun/games101_hw/tree/main/hw_final)*
 
 <!DOCTYPE html>
 <html>
