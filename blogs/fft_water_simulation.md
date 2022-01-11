@@ -160,12 +160,6 @@
     <div id="wmd-preview" class="wmd-preview">
       <div class="md-section-divider">
       </div>
-      <p data-anchor-id="x8h7">
-        <em>本文中包含公式，某些markdown解析器可能不支持，可使用vs code的 markdown 插件打开。</em>
-      </p>
-      <p data-anchor-id="9snz">
-        <em>结果见 fft.mp4。</em>
-      </p>
       <div class="md-section-divider">
       </div>
       <h1 data-anchor-id="wa44" id="基于fft的海面渲染">基于FFT的海面渲染</h1>
