@@ -2752,42 +2752,29 @@
       <div class="md-section-divider">
       </div>
       <h2 data-anchor-id="eke3" id="引用">引用</h2>
-      <div id="refer-anchor-1">
-      </div>
-      <ul data-anchor-id="q4qs">
-        <li>[1]
-          <a href="https://tore.tuhh.de/bitstream/11420/1439/1/GPGPU_FFT_Ocean_Simulation.pdf" target="_blank">Realtime GPGPU FFT Ocean Water Simulation</a>
-        </li>
-      </ul>
-      <div id="refer-anchor-2">
-      </div>
-      <ul data-anchor-id="5856">
-        <li>[2]
-          <a href="https://zhuanlan.zhihu.com/p/277849135" target="_blank">零知识证明 - 理解FFT的蝶形运算</a>
-        </li>
-      </ul>
-      <div id="refer-anchor-3">
-      </div>
-      <ul data-anchor-id="kssp">
-        <li>[3]
-          <a href="https://blog.csdn.net/xiewenzhao123/article/details/79111004" target="_blank">海面模拟以及渲染（计算着色器、FFT、Reflection Matrix)</a>
-        </li>
-      </ul>
-      <div id="refer-anchor-4">
-      </div>
-      <ul data-anchor-id="uac3">
-        <li>
-          <p>[4]
-            <a href="https://zhuanlan.zhihu.com/p/95917609" target="_blank">真实感水体渲染技术总结</a>
-          </p>
-        </li>
-        <li>
-          <p>[5]
-            <a href="https://zhuanlan.zhihu.com/p/335045713" target="_blank">FFT海洋水体渲染学习笔记</a>
-          </p>
-        </li>
-      </ul>
     </div>
   </body>
 
 </html>
+
+## 引用
+
+<div id="refer-anchor-1"></div>
+
+- [1] [Realtime GPGPU FFT Ocean Water Simulation](https://tore.tuhh.de/bitstream/11420/1439/1/GPGPU_FFT_Ocean_Simulation.pdf)
+
+<div id="refer-anchor-2"></div>
+
+- [2] [零知识证明 - 理解FFT的蝶形运算](https://zhuanlan.zhihu.com/p/277849135)
+
+<div id="refer-anchor-3"></div>
+
+- [3] [海面模拟以及渲染（计算着色器、FFT、Reflection Matrix)](https://blog.csdn.net/xiewenzhao123/article/details/79111004)
+
+<div id="refer-anchor-4"></div>
+
+- [4] [真实感水体渲染技术总结](https://zhuanlan.zhihu.com/p/95917609)
+
+<div id="refer-anchor-5"></div>
+
+- [5] [FFT海洋水体渲染学习笔记](https://zhuanlan.zhihu.com/p/335045713)
