@@ -2757,8 +2757,6 @@
 
 </html>
 
-## 引用
-
 <div id="refer-anchor-1"></div>
 
 - [1] [Realtime GPGPU FFT Ocean Water Simulation](https://tore.tuhh.de/bitstream/11420/1439/1/GPGPU_FFT_Ocean_Simulation.pdf)
