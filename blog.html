@@ -6,8 +6,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
     <link href="css/blog.css" rel="stylesheet" type="text/css" media="all" />
-    <script src="jquery-3.3.1.min.js"></script>
-    <script src="Markdown.Converter.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css" rel="stylesheet" type="text/css" media="all" />
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it-texmath@1.0.0/texmath.js"></script>
 </head>
  
 <body>
@@ -34,8 +38,6 @@
         <p>Copyright &copy; 2019-2020 Jiang Dunchun.Supported by <a href="http://www.bootcss.com">bootstrap</a></p>
     </div>
 
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
     <script type="text/javascript">
         var url = decodeURI(window.location.href);
         var argsIndex = url.split("?id=");
@@ -46,8 +48,11 @@
         var blog_con_div = document.createElement("div");
         blog_con_div.className = "blog";
         $.get("blogs/"+path,null,function(data){
-            var converter = new Markdown.Converter();
-            var htm = converter.makeHtml(data);
+            var md = markdownit({html:true})
+                      .use(texmath, { engine: katex,
+                                      delimiters: 'dollars',
+                                      katexOptions: { macros: {"\\RR": "\\mathbb{R}"} } } );
+            var htm = md.render(data);
             blog_con_div.innerHTML = htm;
         });
         main_div.appendChild(blog_con_div);

@@ -1,7 +1,12 @@
 # WebRTC in IPC Live & Remote Rendering
+
+------------------------------
+
 *published on 10/10/2020* 
 
-This blog based on the ppt of a technical presentation.
+*This blog based on the slides of a technical presentation.*
+
+-----------------------------
 
 <center><img style="max-width: 80%;" src="blogs/WebRTC_in_IPC_Live_&_Remote_Rendering/1.PNG"></center>
 
