@@ -8,6 +8,7 @@
     <link href="css/indexstyle.css" rel="stylesheet" type="text/css" media="all" />
     <script src="resume/resume.js"></script>
     <script src="blogs.js"></script>
+    <script src="papers.js"></script>
 </head>
  
 <body>
@@ -30,6 +31,7 @@
                 <div style="height:20px"></div>
                 <ul>
                     <li><a href="javascript:click_blogs()">Blogs</a></li>
+                    <li><a href="javascript:click_papers()">Papers</a></li>
                     <li><a href="javascript:click_about_me()">About Me</a></li>
                     <li><a href="https://www.linkedin.com/in/jiang-dunchun-9006b2123/">Linkedin</a></li>
                     <li><a href="https://github.com/jiangdunchun">GitHub</a></li>
@@ -47,7 +49,7 @@
     <script type="text/javascript">
         var about_me_div_id = "about_me_div";
         var blogs_div_id = "blogs_div";
-        var blog_con_div_id = "blog_con_div"
+        var papers_div_id = "papers_div";
         var content_div = document.getElementById("content_div");
 
         clear_content = function()
@@ -121,6 +123,31 @@
                 blogs_div.appendChild(split_div);
             }
             content_div.appendChild(blogs_div);
+        }
+
+        click_papers = function(){
+            if (document.getElementById(papers_div_id) != null ) return;
+            clear_content();
+
+            var papers_div = document.createElement("div");
+            papers_div.id = papers_div_id;
+            for(var i in PapersCatalog){
+                var item_div = document.createElement("blog");
+
+                var name_p = document.createElement("h1");
+                var href_d = document.createElement("a");
+                href_d.href = "./papers/" + PapersCatalog[i].path;
+                href_d.innerText = PapersCatalog[i].name;
+                name_p.appendChild(href_d);
+                item_div.appendChild(name_p);
+
+                papers_div.appendChild(item_div);
+
+                var split_div = document.createElement("div");
+                split_div.style = "height:5px";
+                papers_div.appendChild(split_div);
+            }
+            content_div.appendChild(papers_div);
         }
 
         click_blogs();
