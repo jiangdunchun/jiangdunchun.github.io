@@ -1,0 +1,4 @@
+deploy: 
+	type: git
+	repo: git@github.com:jiangdunchun/jiangdunchun.github.io.git
+	branch: master
