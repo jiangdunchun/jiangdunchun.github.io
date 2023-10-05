@@ -2,17 +2,17 @@
 
 ---
 
-![fxaa result][0]
+<center><img style="max-width: 80%;" src="blogs/fxaa/fxaa_result.png"></center>
 
 在GAMES105课程的第一次作业要求公布时，我就意识到FXAA完美的符合了附加题的要求。我于是找到了自己之前在[shadertoy上实现的FXAA](https://www.shadertoy.com/view/stlSzf)，并将其塞入到Piccolo的渲染流程中。虽然reviewer也曾怀疑这个feature是否会影响渲染效率，并增加了Piccolo的复杂性，但最后感谢他们还是同意了合并请求。感谢王希老师和社区的小伙伴，构建了这样一个有趣的社区，并让我有幸成为王希老师口中的"第一个完成贡献feature的小伙伴"。
 
-![wall][7]
+<center><img style="max-width: 80%;" src="blogs/fxaa/wall.PNG"></center>
 
 <center><p>图0 上墙瞬间(也就来回看了几十遍)</p></center>
 
 ## 添加FXAA的render pass
 
-![insert fxaa pass][1]
+<center><img style="max-width: 80%;" src="blogs/fxaa/insert_fxaa_pass.png"></center>
 
 <center><p>图1 添加FXAA的render pass</p></center>
 
@@ -30,13 +30,13 @@
 
 在了解FXAA的fragment shader之前，我们先来简单的了解一下FXAA的原理。大部分的锯齿都出现在物体边缘或者高光变化的部分，我们可以通过对已有渲染结果进行后处理的方式，检测出像素之间的边缘，然后根据边缘信息对边缘两侧的像素进行混合，达到抗锯齿的效果。
 
-![aa result][2]
+<center><img style="max-width: 80%;" src="blogs/fxaa/aa_result.png"></center>
 
 <center><p>图2 理想的抗锯齿效果</p></center>
 
 ### 像素检测
 
-![edge detective][3]
+<center><img style="max-width: 80%;" src="blogs/fxaa/pixel_detective.png"></center>
 
 <center><p>图3 锯齿大多出现在物体边缘（左侧为原图，右侧红色部分为潜在边缘像素）</p></center>
 
@@ -51,13 +51,13 @@ FXAA采用的边缘检测算法如下：
 
 ### 确定边缘
 
-![edge detective][4]
+<center><img style="max-width: 80%;" src="blogs/fxaa/edge_detective.png"></center>
 
 <center><p>图4 对于红点所在像素，绿色箭头为边缘的切线方向，蓝色箭头为边缘的法线方向</p></center>
 
 目前为止我们已经找到了潜在的边缘像素，但是如何确定与哪个邻近像素相混合呢？我们需要确定当前像素所在边缘切线方向和法线方向，切线方向是平行于边缘的方向，法线方向则指向待混合的像素方向。
 
-![nine grid][5]
+<center><img style="max-width: 80%;" src="blogs/fxaa/nine_grid.png"></center>
 
 <center><p>图5 当前像素和它临近的八个像素</p></center>
 
@@ -69,7 +69,7 @@ FXAA采用的边缘检测算法如下：
 
 ### 沿边缘探测终点，确定混合权重
 
-![points detective][6]
+<center><img style="max-width: 80%;" src="blogs/fxaa/points_detective.png"></center>
 
 <center><p>图6 对于红点所在像素的边缘，需要探测两端的终点（蓝点）以确定混合权重</p></center>
 
@@ -261,12 +261,3 @@ void main()
 
 
 ```
-
-[0]: ./fxaa/fxaa_result.png
-[1]: ./fxaa/insert_fxaa_pass.png
-[2]: ./fxaa/aa_result.png
-[3]: ./fxaa/pixel_detective.png
-[4]: ./fxaa/edge_detective.png
-[5]: ./fxaa/nine_grid.png
-[6]: ./fxaa/points_detective.png
-[7]: ./fxaa/wall.PNG
