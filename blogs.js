@@ -1,5 +1,10 @@
 BlogsCatalog = [
     {
+        "name":"FXAA - 我给Piccolo贡献了第一个feature",
+        "time":"5/3/2023",
+        "path":"fxaa.md"
+    },
+    {
         "name":"基于FFT的海面渲染",
         "time":"25/9/2021",
         "path":"fft_water_simulation.md"
