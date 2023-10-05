@@ -6,6 +6,10 @@
 
 在GAMES105课程的第一次作业要求公布时，我就意识到FXAA完美的符合了附加题的要求。我于是找到了自己之前在[shadertoy上实现的FXAA](https://www.shadertoy.com/view/stlSzf)，并将其塞入到Piccolo的渲染流程中。虽然reviewer也曾怀疑这个feature是否会影响渲染效率，并增加了Piccolo的复杂性，但最后感谢他们还是同意了合并请求。感谢王希老师和社区的小伙伴，构建了这样一个有趣的社区，并让我有幸成为王希老师口中的"第一个完成贡献feature的小伙伴"。
 
+![wall][7]
+
+<center><p>图0 上墙瞬间(也就来回看了几十遍)</p></center>
+
 ## 添加FXAA的render pass
 
 ![insert fxaa pass][1]
@@ -265,3 +269,4 @@ void main()
 [4]: ./fxaa/edge_detective.png
 [5]: ./fxaa/nine_grid.png
 [6]: ./fxaa/points_detective.png
+[7]: ./fxaa/wall.PNG
