@@ -1,6 +1,10 @@
 # FXAA - 我给Piccolo贡献了第一个feature
 
----
+------------------------------
+
+*published on 5/3/2023*
+
+-----------------------------
 
 <center><img style="max-width: 80%;" src="blogs/fxaa/fxaa_result.png"></center>
 
